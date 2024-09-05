@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light and Dark Mode Toggle</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="toggle" id="toggleMode">
+            <i class="ri-sun-fill icon" id="sunIcon"></i>
+            <i class="ri-moon-fill icon hidden" id="moonIcon"></i>
+        </div>
+        <h1>Welcome to the Light/Dark Mode Toggle Page</h1>
+        <p>Click the icon in the top right corner to switch modes.</p>
+    </div>
+    <script src="script14.js"></script>
+</body>
+</html>

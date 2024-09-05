@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+</style>
+<body>
+    <div class="w-full bg-white rounded-lg shadow-md p-6 transition transform hover:-translate-y-2">
+        <div class="w-full h-48 bg-gray-100 rounded-lg overflow-hidden">
+            <img class="w-full h-full object-cover" src='${value.image}' alt="${value.name}">
+        </div>
+        <h1 class="mt-4 text-lg font-semibold text-gray-800">${value.name}</h1>
+            <div class="flex items-center mt-2">
+            ${[...Array(5)].map((_, i) => `
+                <svg class="w-5 h-5 ${i < value.rating ? 'text-yellow-400' : 'text-gray-300'}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.049 2.927C9.324 2.001 10.676 2.001 10.951 2.927l1.156 3.724a1 1 0 00.95.676h3.9c.967 0 1.372 1.24.588 1.81l-3.148 2.284a1 1 0 00-.364 1.118l1.2 3.785c.267.843-.69 1.54-1.44 1.118L10 13.347l-3.13 2.224c-.75.423-1.707-.275-1.44-1.118l1.2-3.785a1 1 0 00-.364-1.118L3.118 9.137c-.784-.57-.379-1.81.588-1.81h3.9a1 1 0 00.95-.676l1.156-3.724z"/>
+                </svg>
+                `).join('')}
+                <h2 class="mt-2 text-gray-600">${value.rating}</h2>
+        </div>
+        <h2 class="mt-2 text-gray-600">${value.description}</h2>
+        <h3 class="mt-2 text-blue-500 font-bold">Price: $${value.price.toFixed(2)}</h3>
+        <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md font-semibold transition transform hover:bg-blue-600 hover:scale-105" onclick="addToCart('${value.name}')">Add to Cart</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Image with Arrow Keys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#movingImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+}
+img{
+    height: 40vh;
+}
+
+</style>
+<body>
+    <div class="container">
+        <img src="https://imgs.search.brave.com/vidoMk86Es6mOYk1GZYMk8AJMlXfculmJDJQOf-9Wnc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2xpcGFydG1heC5j/b20vcG5nL21pZGRs/ZS8xMjAtMTIwMjk2/NV9vZ2d5LXBlcnNv/LW9nZ3ktYW5kLXRo/ZS1jb2Nrcm9hY2hl/cy1vZ2d5LnBuZw" alt="Moving Image" id="movingImage">
+    </div>
+    <script src="script13.js"></script>
+</body>
+</html>

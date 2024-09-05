@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .scrollercustom::-webkit-scrollbar {
+        background-color: #ffffff;
+        display: none;
+    }
+</style>
+<body>
+    <div class="box w-full h-screen flex items-center justify-center bg-zinc-900 text-white font-gilroy">
+        <div class="inpandresult">
+            <input class="px-3 py-2 bg-zinc-800 outline-none rounded-md font-semibold" type="text" placeholder="Filter out name...">
+            <div class="scrollercustom w-full h-52 overflow-y-scroll">
+            </div>
+        </div>
+    </div>
+    <script src="script11.js"></script>
+</body>
+</html>
